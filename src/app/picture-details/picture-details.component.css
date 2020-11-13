@@ -1,0 +1,62 @@
+
+body{
+    margin-top: -24px;
+    padding-top: 50px;
+    background-color: #666666;
+    color: white;
+}
+.container{
+    margin-top: 40px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #333333;
+    padding: 10px;
+}
+.pictureDetails{
+    color: green;
+}
+h3{
+    height: 35px;
+}
+
+#buttons{
+    text-align: end;
+}
+.btn{
+    font-size: 20px;
+    margin-left: 20px;
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: #111111;
+}
+#btnBack{
+    position: absolute;
+    margin-left: 0px;
+}
+#btnDelete:hover{
+    background-color: #AA0000;
+}
+#btnEdit:hover{
+    background-color: green;
+}
+#btnBack:hover{
+    background-color: #2222AA;
+}
+
+@media (min-width: 1000px){
+    .container{
+        width: 1000px
+    }
+    #title{
+        height: 333px;
+    }
+}
+@media (max-width: 1000px){
+    .container{
+        width: 630px;
+        min-width: 630px;
+    }
+    .right{
+        margin: 10px;
+    }
+}

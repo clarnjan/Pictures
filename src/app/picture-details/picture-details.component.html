@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div *ngIf="picture">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img [src]="picture.url">
+                </div>
+                <div class="col right">
+                    <h3>Id: </h3>
+                    <h3 class="pictureDetails">{{picture.id}}</h3>
+                    <h3>Album Id: </h3>
+                    <h3 class="pictureDetails">{{picture.albumId}}</h3>
+                    <h3>Title: </h3>
+                    <h3 id="title" class="pictureDetails">{{picture.title}}</h3>
+                    <button id="btnBack" class="btn btn-dark" (click)="back()">Back</button>
+                    <div id="buttons">
+                        <button id="btnEdit" class="btn btn-dark"
+                            [routerLink]="['/pictures/edit/',picture.id]">Edit</button>
+                        <button id="btnDelete" class="btn btn-dark" (click)="delete()">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

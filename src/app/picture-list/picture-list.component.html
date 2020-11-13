@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navigation">
+  </div>
+    <div class="container mt-4 ">
+      <div class="row">
+        <div class="col left">
+          <button id="btnPrevious" class="btn btn-dark" (click)="previousPage()" [disabled]="page<=1">Previous</button>
+        </div>
+        <div class="col center">
+          <span id="page">Page {{page}}</span>
+        </div>
+        <div class="col right">
+          <button id="btnNext" class="btn btn-dark" (click)="nextPage()" >Next</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item" [routerLink]="['/create']">
+          <h1 id="textCreate">Create new Picture item</h1>
+        </div>
+        <div class="item" *ngFor="let picture of displayList; index as i" [routerLink]="['/pictures',picture.id]">
+          <div id="imgDiv">
+            <img [src]="picture.thumbnailUrl" />
+          </div>
+          <div class="title">{{ picture.title }}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col left">
+          <button id="btnPrevious" class="btn btn-dark" (click)="previousPage()" [disabled]="page<=1">Previous</button>
+        </div>
+        <div class="col center">
+          <span id="page">Page {{page}}</span>
+        </div>
+        <div class="col right">
+          <button id="btnNext" class="btn btn-dark" (click)="nextPage()" >Next</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col right">
+                    <h3>Album Id: </h3>
+                    <input type="text" [(ngModel)]="albumId">
+                    <h3>Title: </h3>
+                    <input type="text" id="title" [(ngModel)]="title">
+                    <h3>Url: </h3>
+                    <input type="text" [(ngModel)]="url">
+                    <h3>Thumbnail Url: </h3>
+                    <input type="text" [(ngModel)]="thumbnailUrl">
+                    <div id="buttons">
+                        <button id="btnFinish" class="btn btn-dark" (click)="finish()">Finish</button>
+                    </div>
+                    <button id="btnBack" class="btn btn-dark" (click)="back()">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
